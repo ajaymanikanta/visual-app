@@ -1,0 +1,12 @@
+pipeline {
+ agent any 
+   tools {
+     maven 'Maven'
+}
+
+stages {
+
+	stages ('Build') {
+	 steps {
+	sh 'mvn -Dmaven.test.failure.ignore=true install'
+}
